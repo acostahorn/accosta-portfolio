@@ -1,20 +1,38 @@
+/* 1. Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Cantarell", sans-serif;
   background-color: #ddf3f4;
-  margin: 0
+  margin: 0;
 }
 
+/* 2. Fixed Main Content Container */
 .main-content {
-  width: 1126px;
-  max-width: 90%;
+  width: 100%;          
+  max-width: 1126px;    /* Keeps it perfectly sized on desktop */
   margin: 40px auto;
-  padding: 40px;
+  padding: 40px 20px;   /* Slightly reduced side padding on mobile */
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
   text-align: center;
-  box-sizing: border-box;
 }
+
+/* 3. Responsive Profile/Project Images */
+.main-content img {
+  border-radius: 16px;
+  width: 100%;          /* Allows the image to scale down responsively */
+  max-width: 300px;     /* Prevents it from blowing up too huge on desktop */
+  height: auto;         /* Keeps aspect ratio perfect */
+  margin: 20px auto;    /* Centers it nicely */
+  display: block;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+
 
 .apps-container {
   text-align: left;
@@ -76,13 +94,6 @@ body {
     padding-bottom: 8px;
 }
 
-/* 📱 Responsive Design fallback for Mobile Screens */
-@media (max-width: 900px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Drops back to 1 column on small displays */
-        gap: 20px;
-    }
-}
 
 
 
@@ -111,19 +122,12 @@ body {
 }
 
 
-.main-content img {
-  border-radius: 16px;
-  width: 300px;
-  margin: 20px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1)
-}
-
 
 .main-content h1, 
-.apps-container h2 {  /* Whichever heading tag you used for the "Apps" title */
-    margin-top: 0;     /* Completely removes the dead space above the title */
-    margin-bottom: 20px; /* Reduces the gap between the title and your first card */
-    font-size: 2.2rem;   /* Slightly smaller font scale fits tighter viewports better */
+.apps-container h2 {  
+    margin-top: 0;    
+    margin-bottom: 20px;
+    font-size: 2.2rem;   
 }
 
 .project-card h3 {
@@ -170,7 +174,6 @@ body {
 .btn-primary {
   background-color: rgb(39, 146, 135);
   font-size: 0.8rem;
-  /* Matches your Teal navbar */
   color: white;
   margin: 2px;
 }
@@ -204,5 +207,56 @@ a.btn-secondary:hover {
     background-color: #f8fafc; 
     
     border-radius: 0 8px 8px 0;
+}
+
+/*  Responsive Design fallback for Mobile Screens */
+@media (max-width: 900px) {
+    /* Keeps the overall container fitting snug on the phone screen */
+    .main-content {
+        padding: 20px 15px; 
+        margin: 10px auto;
+        width: 100%;
+        overflow: hidden; /* Prevents stray items from forcing horizontal scroll */
+    }
+
+    /* Centers the overall content block */
+    .apps-container {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center; /* Helps center the section titles nicely on a phone */
+    }
+
+    /* Forces your grids to use single rows that perfectly respect the screen borders */
+    .portfolio-grid,
+    .portfolio-grid-list {
+        grid-template-columns: 1fr !important; 
+        width: 100%;
+        gap: 20px;
+        padding: 0;
+    }
+
+    /* Fixes titles from pushing past the card edge */
+    .project-card h3 {
+        font-size: 1.2rem;
+        word-wrap: break-word; /* Allows long titles like "Symphony no.1 in G" to wrap cleanly */
+    }
+
+    /* Forces the movement buttons to wrap perfectly inside the card bounds */
+    .project-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    /* Adjusts the buttons to share screen space gracefully on small phones */
+    .project-actions .btn {
+        font-size: 0.75rem;     /* Slightly smaller font for mobile screens */
+        padding: 8px 4px;       /* Less side padding inside the button */
+        white-space: normal !important; /* OVERRIDES NOWRAP: Allows text to drop to a 2nd line if screen is tiny */
+        flex: 1 1 calc(50% - 4px); /* Puts exactly 2 buttons per row side-by-side */
+        min-width: 100px;       /* Prevents buttons from squeezing into nothing */
+    }
 }
 

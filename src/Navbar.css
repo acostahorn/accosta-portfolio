@@ -1,55 +1,101 @@
 .navbar {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(8, 105, 123);
-    height: 50px;
+    min-height: 50px;
     color: #ffffff;
+    padding: 0 20px;
+    width: 100%;
+}
 
-
+/* 1. Flexbasis configuration ensures the logo takes up exact proportional space */
+.navbar-left {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-start;
 }
 
 .navbar-left .logo {
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.7em;
-    transition: 1000ms;
+    font-size: 1.4rem;
+    transition: color 1000ms;
     color: #ffffff;
-    padding: 10px;
+    padding: 10px 0;
+    white-space: nowrap;
 }
 
 .navbar-left .logo:hover {
     color: gold;
 }
 
+/* 2. This locks the links right in the middle of the navbar */
 .navbar-center {
-    position: absolute;
-    left: 50%;
-    font-size: 1.4em;
-    display: inline-block;
-    transform: translateX(-50%);
-   
+    display: flex;
+    justify-content: center;
+    flex: 2; /* Takes up the middle bulk of the screen */
 }
 
 .navbar-center .nav-links {
-
     list-style-type: none;
     display: flex;
     margin: 0;
+    padding: 0;
+    gap: 15px;
+    font-size: 1.2rem;
 }
 
-
-
 .navbar-center .nav-links a {
-    color: #ffffff;
     text-decoration: none;
-    padding: 1em;
-    transition: 1000ms;
-     color:aquamarine
+    padding: 10px 5px;
+    transition: color 1000ms;
+    color: aquamarine;
+    white-space: nowrap;
 }
 
 .navbar-center .nav-links a:hover {
     color: gold;
-    text-decoration: none;
+}
+
+/* 3. DUMMY PSEUDO-ELEMENT AT THE BOTTOM OF YOUR NAVBAR SECTION */
+/* This balances out the logo on the left so the center can be mathematically centered! */
+.navbar::after {
+    content: "";
+    flex: 1; 
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column; 
+        padding: 15px;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* Disables the balancing act so things don't shift on phones */
+    .navbar::after {
+        display: none; 
+    }
+
+    .navbar-left {
+        flex: initial;
+        justify-content: center;
+    }
+
+    .navbar-center {
+        flex: initial;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar-center .nav-links {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar-center .nav-links a {
+        padding: 8px;
+        font-size: 1rem;
+    }
 }
