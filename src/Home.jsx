@@ -10,4 +10,5 @@ export default function Home() {
                 I possess a dual-competency in network infrastructure and software development, with proficiency in C++, JavaScript, and modern MVC architecture. I am eager to apply my technical foundation, problem-solving discipline, and leadership experience to dynamic development or infrastructure-focused roles.</p>
 
         </>)
-}get
+}
+
