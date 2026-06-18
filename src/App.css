@@ -1,0 +1,208 @@
+body {
+  font-family: "Cantarell", sans-serif;
+  background-color: #ddf3f4;
+  margin: 0
+}
+
+.main-content {
+  width: 1126px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.apps-container {
+  text-align: left;
+  max-width: 900px;
+  margin: 0;
+}
+
+.page-title {
+  color: rgb(8, 105, 123);
+  font-size: 1.5em;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;       /* crucial: allows buttons to cleanly wrap to the next line */
+    gap: 8px;              /* Reduces space between buttons slightly to maximize room */
+    margin-top: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+.project-actions .btn {
+    flex: initial;         /* Fixes the squeeze: stops forcing buttons to expand equally */
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;   /* Keeps text like "View Source" nicely on a single line */
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of exactly equal width */
+    gap: 30px;                      /* Creates a clean gutter space between columns */
+    align-items: start;             /* Prevents shorter columns from stretching awkwardly */
+    margin-top: 20px;
+}
+
+.portfolio-grid-list {
+    display: grid;
+    margin-top: 20px;
+}
+
+/* Adds a tight stack layout inside each column */
+.column-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;                      /* Spacing between individual cards in the same column */
+}
+
+.section-title {
+    font-size: 1.4rem;
+    color: #1a4d4a;                 /* Using your signature teal color */
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddf3f4; /* Subtle accent line under the category titles */
+    padding-bottom: 8px;
+}
+
+/* 📱 Responsive Design fallback for Mobile Screens */
+@media (max-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Drops back to 1 column on small displays */
+        gap: 20px;
+    }
+}
+
+
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 24px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.18);
+}
+
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+
+.main-content img {
+  border-radius: 16px;
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1)
+}
+
+
+.main-content h1, 
+.apps-container h2 {  /* Whichever heading tag you used for the "Apps" title */
+    margin-top: 0;     /* Completely removes the dead space above the title */
+    margin-bottom: 20px; /* Reduces the gap between the title and your first card */
+    font-size: 2.2rem;   /* Slightly smaller font scale fits tighter viewports better */
+}
+
+.project-card h3 {
+  margin: 0 0 5px 0;
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+
+.project-card p {
+  text-align: justify;
+  padding: 0em;
+  color: rgb(6, 73, 85);
+  font-size: 1rem;
+}
+
+.tag {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: rgb(6, 73, 85);
+  padding: 10px;
+  text-align: justify;
+
+}
+
+.btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: rgb(39, 146, 135);
+  font-size: 0.8rem;
+  /* Matches your Teal navbar */
+  color: white;
+  margin: 2px;
+}
+
+.btn-primary:hover {
+  background-color: rgb(30, 115, 106);
+  color: gold;
+}
+
+.btn-secondary {
+  background-color: #f1f5f9;
+  font-size: 0.8rem;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+
+
+.btn-secondary:hover {
+    background-color: #ddf3f4;
+}
+
+a.btn-secondary:hover {
+  color: black;
+}
+
+.legacy-code-box {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f8fafc; 
+    
+    border-radius: 0 8px 8px 0;
+}
+
