@@ -1,0 +1,152 @@
+/* Blog.css */
+
+/* Centers the entire blog section on your screen */
+.blog-container {
+  max-width: 950px;
+  margin: 0 auto;
+  /* Reduced top padding from 40px to 10px */
+  padding: 10px 20px 40px 20px;
+}
+
+/* Spaces out your cards vertically */
+.blog-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* Generous vertical gap between cards */
+}
+
+/* Your card base layout */
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* Centers items horizontally within the card */
+  gap: 32px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.18);
+}
+
+/* Styling for the Badge type text */
+.badge {
+  font-size: 0.85rem;
+  color: #718096;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Heading style adjustments */
+.blog-card h2 {
+  font-size: 1.4rem;
+  color: #1a202c;
+  margin: 0 0 4px 0;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: #035798;
+  /* A soft grey to keep it subtle */
+  margin: -8px 0 8px 0;
+  /* Tighten the spacing between title and image */
+  font-weight: 500;
+}
+
+/* Left side container constraints */
+.blog-image-left {
+  flex-shrink: 0;
+  /* Prevents the image container from squishing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-image-left img {
+  max-width: 150px;
+  /* Sized beautifully for a row badge */
+  width: 100%;
+  height: auto;
+}
+
+/* Right side details container */
+.blog-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Left-aligns text elements */
+  text-align: left;
+  /* Changes text from center to left-aligned */
+  flex-grow: 1;
+}
+
+
+/* --- Your requested post-text attributes --- */
+.post-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4a5568;
+  /* Soft slate gray for readability */
+  max-width: 600px;
+  /* Prevents text from stretching too wide */
+  margin: 8px 0 16px 0;
+  font-weight: 400;
+}
+
+/* Wrapper to isolate the tags block spacing */
+.tags {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* --- Mobile Responsive Rules --- */
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 10px 16px 20px 16px;
+    /* Slightly tighter padding on mobile */
+  }
+
+  .blog-card {
+    flex-direction: column;
+    /* Stack image on top of text */
+    align-items: center;
+    /* Center everything inside the card */
+    gap: 16px;
+    /* Reduce the massive desktop gap */
+    padding: 16px;
+    /* Give text more breathing room */
+  }
+
+  .blog-image-left img {
+    max-width: 120px;
+    /* Slightly scale down the badge for smaller screens */
+  }
+
+  .blog-content-right {
+    align-items: center;
+    /* Center text alignments for mobile view */
+    text-align: center;
+    /* Centers the headings and description text */
+    width: 100%;
+  }
+
+  .post-text {
+    max-width: 100%;
+    /* Allows text to fill the mobile container safely */
+    margin: 8px 0;
+  }
+
+  .tags {
+    justify-content: center;
+    /* Keeps tags neatly centered under the text */
+  }
+}

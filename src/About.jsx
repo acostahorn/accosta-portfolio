@@ -13,7 +13,7 @@ export default function About() {
                     className="btn btn-secondary"
                     style={{ display: 'inline-block', marginTop: '10px' }}>RUG-III Calculator</a>
             </div>
-            <p className="description">In 2025, I finally decided to quit nursing and start a new career in Computing. I attended a HNC NextGen Computing with excellent outcomes (I am still waiting for my diploma to be issued).
+            <p className="description">In 2025, I finally decided to quit nursing and start a new career in Computing. I attended a HNC NextGen Computing with excellent outcomes - I achieved the award with distinction.
                 While a student, I added extra learning - not included in the course by completing a very long and complex Web Developer bootcamp on Udemy, which allowed me to develop from scratch a fully functioning demo website for a e-shop, which includes an innovative design page an a chat line with a smart chatbot.
                 I also learned to develop from scratch C++ application with the Qt framework - I wrote a Subnet Quiz app that would work as an excellent training tool for infrastructure students.
                 I proved that I can also engineer code by used AI agents. Using openClaw and two AI models, I developed a "Historical Debate and Chat Engine" that allows you either to have a conversation with a historical character, or to have two of them start a dialogue on a topic of your choice.

@@ -4,6 +4,8 @@ import Home from './Home';
 import Apps from './Apps';
 import About from './About';
 import Music from './Music';
+import Blog from './Blog';
+import BlogAdmin from './BlogAdmin';
 import Contact from './Contact';
 
 import './App.css'
@@ -21,7 +23,9 @@ function App() {
           <Route path="/apps" element={<Apps />} />
           <Route path="/about" element={<About />} />
           <Route path="/music" element={<Music />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog-admin" element={<BlogAdmin />} />
 
         </Routes>
       </main>

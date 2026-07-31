@@ -45,7 +45,7 @@ export default function Music() {
                 { movement: "1st Movement", link: "https://www.youtube.com/watch?v=aGoJ-wrOk6g" },
                 { movement: "2nd Movement", link: "https://www.youtube.com/watch?v=SQQK23CsCq4" },
                 { movement: "2nd Movement/for Horn, woodwind quartet and piano", link: "https://www.youtube.com/watch?v=LEkjFikLUv0" },
-                { movement: "3rd Movement", link: "https://www.youtube.com/watch?v=jbmgY_dARbQ" },
+                { movement: "3rd Movement", link: "https://www.youtube.com/watch?v=-qOKxBjWuR8&list=RD-qOKxBjWuR8&start_radio=1" },
 
 
             ]

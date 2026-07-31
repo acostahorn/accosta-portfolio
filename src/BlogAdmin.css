@@ -1,0 +1,104 @@
+/* BlogAdmin.css */
+
+/* Login Guard Container */
+.admin-login-container, .admin-dashboard-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.login-card, .admin-form-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.login-card h2, .admin-form-card h2 {
+  color: #005f73;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.login-card p, .admin-subtitle {
+  color: #718096;
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+/* Forms */
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #005f73;
+}
+
+/* File Input */
+.file-input-wrapper {
+  padding: 12px;
+  border: 2px dashed #cbd5e0;
+  border-radius: 6px;
+  background-color: #f7fafc;
+  text-align: center;
+}
+
+.file-count {
+  font-size: 0.85rem;
+  color: #2b6cb0;
+  margin: 4px 0 0 0;
+}
+
+/* Buttons */
+.login-btn, .publish-btn {
+  background-color: #005f73;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-btn:hover, .publish-btn:hover {
+  background-color: #0a9396;
+}
+
+.login-card input[type="password"] {
+  width: 100%;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}

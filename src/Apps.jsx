@@ -4,6 +4,16 @@ import ProjectCard from './ProjectCard';
 export default function Apps() {
     const myProjects = [
         {
+            title: "C++RULLA - Cirulla Card Game",
+            description: "A Qt C++ app - a digital version of the Genoese card game Cirulla. Offline version, one players vs 3 bots.",
+            tags: ["C++", "Qt Framework", "Object-Oriented Design", "Complex card game rules"],
+            sourceUrl: "https://github.com/acostahorn/ciapachinze",
+            downloadUrls: [
+                { os: "Windows", link: "https://github.com/acostahorn/ciapachinze/releases/download/Cirulla/CirullaSetup_v1.0.exe" }
+            ],
+            isWebApp: false
+        },
+        {
             title: "Subnet Quiz App",
             description: "A simple Qt C++ quiz application that trains infrastructure students and engineers to calculate subnet information on the spot",
             tags: ["C++", "Qt Framework", "Object-Oriented Design"],

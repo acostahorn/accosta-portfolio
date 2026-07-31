@@ -1,5 +1,7 @@
 /* 1. Global Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -11,10 +13,12 @@ body {
 
 /* 2. Fixed Main Content Container */
 .main-content {
-  width: 100%;          
-  max-width: 1126px;    /* Keeps it perfectly sized on desktop */
+  width: 100%;
+  max-width: 1126px;
+  /* Keeps it perfectly sized on desktop */
   margin: 40px auto;
-  padding: 40px 20px;   /* Slightly reduced side padding on mobile */
+  padding: 40px 20px;
+  /* Slightly reduced side padding on mobile */
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
@@ -24,10 +28,14 @@ body {
 /* 3. Responsive Profile/Project Images */
 .main-content img {
   border-radius: 16px;
-  width: 100%;          /* Allows the image to scale down responsively */
-  max-width: 300px;     /* Prevents it from blowing up too huge on desktop */
-  height: auto;         /* Keeps aspect ratio perfect */
-  margin: 20px auto;    /* Centers it nicely */
+  width: 100%;
+  /* Allows the image to scale down responsively */
+  max-width: 300px;
+  /* Prevents it from blowing up too huge on desktop */
+  height: auto;
+  /* Keeps aspect ratio perfect */
+  margin: 20px auto;
+  /* Centers it nicely */
   display: block;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
@@ -42,56 +50,72 @@ body {
 
 .page-title {
   color: rgb(8, 105, 123);
-  font-size: 1.5em;
+  font-size: 2.2rem;
+  margin-top: 0;
+  /* Removes default browser top spacing */
+  margin-bottom: 24px;
+  /* Clean gap before the first card starts */
+  text-align: center;
+
 }
 
 .project-actions {
-    display: flex;
-    flex-wrap: wrap;       /* crucial: allows buttons to cleanly wrap to the next line */
-    gap: 8px;              /* Reduces space between buttons slightly to maximize room */
-    margin-top: 15px;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  /* crucial: allows buttons to cleanly wrap to the next line */
+  gap: 8px;
+  /* Reduces space between buttons slightly to maximize room */
+  margin-top: 15px;
+  width: 100%;
+  justify-content: center;
 }
 
 .project-actions .btn {
-    flex: initial;         /* Fixes the squeeze: stops forcing buttons to expand equally */
-    display: inline-block;
-    padding: 8px 14px;
-    font-size: 0.85rem;
-    text-align: center;
-    border-radius: 6px;
-    text-decoration: none;
-    white-space: nowrap;   /* Keeps text like "View Source" nicely on a single line */
+  flex: initial;
+  /* Fixes the squeeze: stops forcing buttons to expand equally */
+  display: inline-block;
+  padding: 8px 14px;
+  font-size: 0.85rem;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  /* Keeps text like "View Source" nicely on a single line */
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns of exactly equal width */
-    gap: 30px;                      /* Creates a clean gutter space between columns */
-    align-items: start;             /* Prevents shorter columns from stretching awkwardly */
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two columns of exactly equal width */
+  gap: 30px;
+  /* Creates a clean gutter space between columns */
+  align-items: start;
+  /* Prevents shorter columns from stretching awkwardly */
+  margin-top: 20px;
 }
 
 .portfolio-grid-list {
-    display: grid;
-    margin-top: 20px;
+  display: grid;
+  margin-top: 20px;
 }
 
 /* Adds a tight stack layout inside each column */
 .column-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;                      /* Spacing between individual cards in the same column */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Spacing between individual cards in the same column */
 }
 
 .section-title {
-    font-size: 1.4rem;
-    color: #1a4d4a;                 /* Using your signature teal color */
-    text-align: center;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ddf3f4; /* Subtle accent line under the category titles */
-    padding-bottom: 8px;
+  font-size: 1.4rem;
+  color: #1a4d4a;
+  /* Using your signature teal color */
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddf3f4;
+  /* Subtle accent line under the category titles */
+  padding-bottom: 8px;
 }
 
 
@@ -101,7 +125,7 @@ body {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 16px 24px; 
+  padding: 16px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -123,11 +147,11 @@ body {
 
 
 
-.main-content h1, 
-.apps-container h2 {  
-    margin-top: 0;    
-    margin-bottom: 20px;
-    font-size: 2.2rem;   
+.main-content h1,
+.apps-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
 }
 
 .project-card h3 {
@@ -193,7 +217,7 @@ body {
 
 
 .btn-secondary:hover {
-    background-color: #ddf3f4;
+  background-color: #ddf3f4;
 }
 
 a.btn-secondary:hover {
@@ -201,62 +225,70 @@ a.btn-secondary:hover {
 }
 
 .legacy-code-box {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #f8fafc; 
-    
-    border-radius: 0 8px 8px 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f8fafc;
+
+  border-radius: 0 8px 8px 0;
 }
 
 /*  Responsive Design fallback for Mobile Screens */
 @media (max-width: 900px) {
-    /* Keeps the overall container fitting snug on the phone screen */
-    .main-content {
-        padding: 20px 15px; 
-        margin: 10px auto;
-        width: 100%;
-        overflow: hidden; /* Prevents stray items from forcing horizontal scroll */
-    }
 
-    /* Centers the overall content block */
-    .apps-container {
-        max-width: 100%;
-        margin: 0 auto;
-        text-align: center; /* Helps center the section titles nicely on a phone */
-    }
+  /* Keeps the overall container fitting snug on the phone screen */
+  .main-content {
+    padding: 20px 15px;
+    margin: 10px auto;
+    width: 100%;
+    overflow: hidden;
+    /* Prevents stray items from forcing horizontal scroll */
+  }
 
-    /* Forces your grids to use single rows that perfectly respect the screen borders */
-    .portfolio-grid,
-    .portfolio-grid-list {
-        grid-template-columns: 1fr !important; 
-        width: 100%;
-        gap: 20px;
-        padding: 0;
-    }
+  /* Centers the overall content block */
+  .apps-container {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* Helps center the section titles nicely on a phone */
+  }
 
-    /* Fixes titles from pushing past the card edge */
-    .project-card h3 {
-        font-size: 1.2rem;
-        word-wrap: break-word; /* Allows long titles like "Symphony no.1 in G" to wrap cleanly */
-    }
+  /* Forces your grids to use single rows that perfectly respect the screen borders */
+  .portfolio-grid,
+  .portfolio-grid-list {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    gap: 20px;
+    padding: 0;
+  }
 
-    /* Forces the movement buttons to wrap perfectly inside the card bounds */
-    .project-actions {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        width: 100%;
-    }
+  /* Fixes titles from pushing past the card edge */
+  .project-card h3 {
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    /* Allows long titles like "Symphony no.1 in G" to wrap cleanly */
+  }
 
-    /* Adjusts the buttons to share screen space gracefully on small phones */
-    .project-actions .btn {
-        font-size: 0.75rem;     /* Slightly smaller font for mobile screens */
-        padding: 8px 4px;       /* Less side padding inside the button */
-        white-space: normal !important; /* OVERRIDES NOWRAP: Allows text to drop to a 2nd line if screen is tiny */
-        flex: 1 1 calc(50% - 4px); /* Puts exactly 2 buttons per row side-by-side */
-        min-width: 100px;       /* Prevents buttons from squeezing into nothing */
-    }
+  /* Forces the movement buttons to wrap perfectly inside the card bounds */
+  .project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  /* Adjusts the buttons to share screen space gracefully on small phones */
+  .project-actions .btn {
+    font-size: 0.75rem;
+    /* Slightly smaller font for mobile screens */
+    padding: 8px 4px;
+    /* Less side padding inside the button */
+    white-space: normal !important;
+    /* OVERRIDES NOWRAP: Allows text to drop to a 2nd line if screen is tiny */
+    flex: 1 1 calc(50% - 4px);
+    /* Puts exactly 2 buttons per row side-by-side */
+    min-width: 100px;
+    /* Prevents buttons from squeezing into nothing */
+  }
 }
-
