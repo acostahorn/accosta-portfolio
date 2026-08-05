@@ -9,7 +9,8 @@ export default function Apps() {
             tags: ["C++", "Qt Framework", "Object-Oriented Design", "Complex card game rules"],
             sourceUrl: "https://github.com/acostahorn/ciapachinze",
             downloadUrls: [
-                { os: "Windows", link: "https://github.com/acostahorn/ciapachinze/releases/download/Cirulla/CirullaSetup_v1.0.exe" }
+                { os: "Windows", link: "https://github.com/acostahorn/ciapachinze/releases/download/Genova/CirullaSetup_v1.4.exe" },
+                { os: "Linux (AppImage)", link: "https://github.com/acostahorn/ciapachinze/releases/download/Linux/Cirulla-x86_64.AppImage" },
             ],
             isWebApp: false
         },
