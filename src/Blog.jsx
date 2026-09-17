@@ -10,7 +10,7 @@ export default function Blog() {
     useEffect(() => {
         async function fetchPosts() {
             try {
-                const response = await fetch('https://blog-portfolio-dscad0b7esggdsbr.uksouth-01.azurewebsites.net/api/publish');
+                const response = await fetch('https://blog-portfolio-std.azurewebsites.net/api/publish');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }

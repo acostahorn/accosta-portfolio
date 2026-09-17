@@ -18,7 +18,7 @@ export default function BlogAdmin() {
 
     const fetchPosts = async () => {
         try {
-            const res = await fetch('https://blog-portfolio-dscad0b7esggdsbr.uksouth-01.azurewebsites.net/api/publish'); // Sostituisci con il tuo endpoint effettivo
+            const res = await fetch('https://blog-portfolio-std.azurewebsites.net/api/publish'); // Sostituisci con il tuo endpoint effettivo
             const data = await res.json();
             setPosts(data);
             console.log("Caricamento dati riuscito!")
@@ -26,7 +26,6 @@ export default function BlogAdmin() {
         } catch (err) {
             console.error('Errore nel caricamento dei post:', err);
         }
-
 
     }
 

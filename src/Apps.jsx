@@ -14,6 +14,16 @@ export default function Apps() {
             ],
             isWebApp: false
         },
+         {
+            title: "IPv6 Calculator",
+            description: "A simple Qt C++ application designed to help students learn IPv6 - can read also IPv4",
+            tags: ["C++", "Qt Framework", "Object-Oriented Design"],
+            sourceUrl: "https://github.com/acostahorn/ipv6-helper",
+            downloadUrls: [
+                { os: "Linux (AppImage)", link: "https://github.com/acostahorn/ipv6-helper/releases/download/v1.0.0/IPv6_Helper-x86_64.AppImage" }
+            ],
+            isWebApp: false
+        },
         {
             title: "Subnet Quiz App",
             description: "A simple Qt C++ quiz application that trains infrastructure students and engineers to calculate subnet information on the spot",
